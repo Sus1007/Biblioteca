@@ -31,42 +31,40 @@ public class Main {
             scanner.nextLine(); // Limpiar buffer
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     System.out.print("Título: ");
                     String titulo = scanner.nextLine();
                     System.out.print("Autor: ");
                     String autor = scanner.nextLine();
                     controlador.manejarAgregar(titulo, autor);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.print("Título: ");
-                    titulo = scanner.nextLine();
+                    String titulo = scanner.nextLine();
                     controlador.manejarEliminar(titulo);
-                    break;
-                case 3:
-                    System.out.println(controlador.manejarListar());
-                    break;
-                case 4:
+                }
+                case 3 -> System.out.println(controlador.manejarListar());
+                case 4 -> {
                     System.out.print("Título: ");
-                    titulo = scanner.nextLine();
+                    String titulo = scanner.nextLine();
                     System.out.println(controlador.manejarBuscar(titulo) ? "Libro encontrado" : "No encontrado");
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.print("Título: ");
-                    titulo = scanner.nextLine();
+                    String titulo = scanner.nextLine();
                     System.out.println(controlador.manejarPrestar(titulo) ? "Libro prestado" : "No disponible");
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.print("Título: ");
-                    titulo = scanner.nextLine();
+                    String titulo = scanner.nextLine();
                     System.out.println(controlador.manejarDevolver(titulo) ? "Libro devuelto" : "No estaba prestado");
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     System.out.println("Saliendo...");
                     scanner.close();
                     return;
-                default:
-                    System.out.println("Opción inválida");
+                }
+                default -> System.out.println("Opción inválida");
             }
         }
     }
