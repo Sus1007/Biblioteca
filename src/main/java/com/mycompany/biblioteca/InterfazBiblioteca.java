@@ -6,7 +6,7 @@ package com.mycompany.biblioteca;
 
 /**
  *
- * @author EquipoDell
+ * @author Perla Díaz 
  */
 public interface InterfazBiblioteca {
     void mostrar();
